@@ -1,0 +1,100 @@
+@font-face {
+    font-family: heavy main;
+    font-weight: 400;
+    src: url(/content/fonts/3.woff2);
+}
+
+@font-face {
+    font-family: main;
+    font-weight: 400;
+    src: url(/content/fonts/4.woff2);
+}
+
+body {
+    background: radial-gradient(circle, #151826 28%, #0d0f18 100%);
+    font-family: main;
+}
+
+.column {
+    text-align: center;
+    color: azure;
+    max-width: 600px;
+    width: 50%;
+    padding: 10px; 
+    margin: auto;
+}
+
+    .avatar {
+        border-radius: 50%;
+        height: 200px;
+        border: 7px solid azure;
+    }
+
+    .name {
+        font-family: heavy main;
+        font-size: 70px;
+        line-height: 96px;
+        letter-spacing: 0px;
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-weight: 800;
+    }
+
+    .about {
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        margin-top: 0;
+        margin-bottom: 32px;
+        font-weight: 400;
+    }
+
+    .bio-large {
+        font-size: 30px;
+    }
+
+    .socials-title {
+        font-size: 42px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-weight: 400;
+    }
+
+    .button {
+        display: inline-flex;
+        height: 50px;
+        padding: 0;
+        background: #28282B;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        overflow: none;
+        font-family: main, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .button:hover {
+        background: rgb(37, 37, 40);
+    }
+
+    .button:active {
+        background: rgb(37, 37, 40);
+    }
+
+    .button-text,
+    .button-icon {
+        display: inline-flex;
+        align-items: center;
+        padding: 0 24px;
+        color: white;
+        height: 100%;
+    }
+
+    .button-icon {
+        font-size: 1.5em;
+        background: rgba(0, 0, 0, 0.08);
+    }
