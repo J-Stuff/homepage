@@ -15,6 +15,24 @@ body {
     font-family: main;
 }
 
+a:link, a:visited {
+    color: azure;
+}
+
+.telegram-icon,
+.discord-icon,
+.x-icon,
+.steam-icon,
+.github-icon {
+    width: 35px;
+    margin: none;
+}
+
+.bluesky-icon {
+    width: 45px;
+    margin: none;
+}
+
 .column {
     text-align: center;
     color: azure;
@@ -51,6 +69,10 @@ body {
 
     .bio-large {
         font-size: 30px;
+    }
+
+    .TWT-X {
+        font-size: 25px;
     }
 
     .socials-title {
@@ -116,3 +138,4 @@ body {
     .footer a:visited {
         color: azure;
     }
+
