@@ -10,132 +10,359 @@
     src: url(/content/fonts/4.woff2);
 }
 
-body {
-    background: radial-gradient(circle, #151826 28%, #0d0f18 100%);
-    font-family: main;
+
+@keyframes pulse {
+    0% {
+        background-color: #0d0f19;
+    }
+    50% {
+        background-color: #20253f;
+    }
+    100% {
+        background-color: #0d0f19;
+    }
 }
 
-a:link, a:visited {
-    color: azure;
-}
 
-.telegram-icon,
-.discord-icon,
-.x-icon,
-.steam-icon,
-.github-icon {
-    width: 35px;
-    margin: none;
-}
 
-.bluesky-icon {
-    width: 45px;
-    margin: none;
-}
 
-.column {
-    text-align: center;
-    color: azure;
-    max-width: 600px;
-    width: 50%;
-    padding: 10px; 
-    margin: auto;
-}
+/* Width management https://stackoverflow.com/questions/18292286/how-can-i-change-my-css-according-to-the-screen-width-of-a-mobile-device */
+/* Saved my butt */
 
-    .avatar {
-        border-radius: 50%;
-        height: 200px;
-        border: 7px solid azure;
+/* Mobile Devices */
+@media (max-width: 500px) {
+    body {
+        background: radial-gradient(circle, #151826 28%, #0d0f18 100%);
+        font-family: main;
     }
-
-    .name {
-        font-family: heavy main;
-        font-size: 70px;
-        line-height: 96px;
-        letter-spacing: 0px;
-        margin-top: 0;
-        margin-bottom: 16px;
-        font-weight: 800;
-    }
-
-    .about {
-        font-size: 18px;
-        line-height: 32px;
-        letter-spacing: 0px;
-        margin-top: 0;
-        margin-bottom: 32px;
-        font-weight: 400;
-    }
-
-    .bio-large {
-        font-size: 30px;
-    }
-
-    .TWT-X {
-        font-size: 25px;
-    }
-
-    .socials-title {
-        font-size: 42px;
-        line-height: 32px;
-        letter-spacing: 0px;
-        margin-top: 0;
-        margin-bottom: 16px;
-        font-weight: 400;
-    }
-
-    .button {
-        display: inline-flex;
-        height: 50px;
-        padding: 0;
-        background: #28282B;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        overflow: none;
-        font-family: main, sans-serif;
-        font-size: 18px;
-        font-weight: 500;
-        cursor: pointer;
-    }
-
-    .button:hover {
-        background: rgb(37, 37, 40);
-    }
-
-    .button:active {
-        background: rgb(37, 37, 40);
-    }
-
-    .button-text,
-    .button-icon {
-        display: inline-flex;
-        align-items: center;
-        padding: 0 24px;
-        color: white;
-        height: 100%;
-    }
-
-    .button-icon {
-        font-size: 1.5em;
-        background: rgba(0, 0, 0, 0.08);
-    }
-
-    .footer {
-        font-size: 14px;
-        color: azure;
-        line-height: 32px;
-        letter-spacing: 0px;
-        margin-top: 0;
-        margin-bottom: 32px;
-        font-weight: 400;
-    }
-
-    .footer a {
+    
+    a:link, a:visited {
         color: azure;
     }
     
-    .footer a:visited {
+    .telegram-icon,
+    .discord-icon,
+    .x-icon,
+    .steam-icon,
+    .github-icon {
+        width: 35px;
+        margin: none;
+    }
+    
+    .bluesky-icon {
+        width: 45px;
+        margin: none;
+    }
+    
+    .column {
+        text-align: center;
+        color: azure;
+        width: 95%; 
+        margin: auto;
+    }
+    
+        .avatar {
+            background-color: #0d0f19;
+            animation: pulse 2s infinite;
+            border-radius: 50%;
+            height: 200px;
+            border: 5px solid azure;
+        }
+    
+        .name {
+            font-family: heavy main;
+            font-size: 70px;
+            line-height: 96px;
+            letter-spacing: 0px;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+    
+        .bio-head {
+            font-size: 45px;
+            font-weight: bold;
+            margin: 10px;
+        }
+    
+        .bio {
+            font-size: 25px;
+        }
+    
+        .TWT-X {
+            font-size: 25px;
+        }
+    
+        .socials-title {
+            font-size: 42px;
+            line-height: 32px;
+            letter-spacing: 0px;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+    
+        .button {
+            display: inline-flex;
+            height: 50px;
+            padding: 0;
+            background: #28282B;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            overflow: none;
+            font-family: main, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    
+        .button:hover {
+            background: rgb(37, 37, 40);
+        }
+    
+        .button:active {
+            background: rgb(37, 37, 40);
+        }
+    
+        .button-text,
+        .button-icon {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 24px;
+            color: white;
+            height: 100%;
+        }
+    
+        .button-icon {
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.08);
+        }
+    
+        .button-disabled {
+            display: inline-flex;
+            height: 50px;
+            padding: 0;
+            background: #28282B;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            overflow: none;
+            font-family: main, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: not-allowed;
+        }
+    
+        .button-disabled-text,
+        .button-disabled-icon {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 24px;
+            color: white;
+            height: 100%;
+            opacity: 50%;
+        }
+    
+        .button-disabled-icon {
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.08);
+        }
+    
+        .footer {
+            font-size: 14px;
+            color: azure;
+            line-height: 32px;
+            letter-spacing: 0px;
+            margin-top: 0;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+    
+        .footer a {
+            color: azure;
+        }
+        
+        .footer a:visited {
+            color: azure;
+        }
+    
+        .solid-break {
+            color: azure;
+            background-color: azure;
+            height: 3px;
+            width: 50%;
+        }
+}
+
+
+
+/* Desktop Devices */
+@media (min-width: 500px) {
+    body {
+        background: radial-gradient(circle, #151826 28%, #0d0f18 100%);
+        font-family: main;
+    }
+    
+    a:link, a:visited {
         color: azure;
     }
+    
+    .telegram-icon,
+    .discord-icon,
+    .x-icon,
+    .steam-icon,
+    .github-icon {
+        width: 35px;
+        margin: none;
+    }
+    
+    .bluesky-icon {
+        width: 45px;
+        margin: none;
+    }
+    
+    .column {
+        text-align: center;
+        color: azure;
+        width: 60%; 
+        margin: auto;
+    }
+    
+        .avatar {
+            background-color: #0d0f19;
+            animation: pulse 2s infinite;
+            border-radius: 50%;
+            height: 200px;
+            border: 7px solid azure;
+        }
+    
+        .name {
+            font-family: heavy main;
+            font-size: 70px;
+            line-height: 96px;
+            letter-spacing: 0px;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+    
+        .bio-head {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 10px;
+        }
+    
+        .bio {
+            font-size: 30px;
+        }
+    
+        .TWT-X {
+            font-size: 25px;
+        }
+    
+        .socials-title {
+            font-size: 42px;
+            line-height: 32px;
+            letter-spacing: 0px;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+    
+        .button {
+            display: inline-flex;
+            height: 50px;
+            padding: 0;
+            background: #28282B;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            overflow: none;
+            font-family: main, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    
+        .button:hover {
+            background: rgb(37, 37, 40);
+        }
+    
+        .button:active {
+            background: rgb(37, 37, 40);
+        }
+    
+        .button-text,
+        .button-icon {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 24px;
+            color: white;
+            height: 100%;
+        }
+    
+        .button-icon {
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.08);
+        }
+    
+        .button-disabled {
+            display: inline-flex;
+            height: 50px;
+            padding: 0;
+            background: #28282B;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            overflow: none;
+            font-family: main, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: not-allowed;
+        }
+    
+        .button-disabled-text,
+        .button-disabled-icon {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 24px;
+            color: white;
+            height: 100%;
+            opacity: 50%;
+        }
+    
+        .button-disabled-icon {
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.08);
+        }
+    
+        .footer {
+            font-size: 14px;
+            color: azure;
+            line-height: 32px;
+            letter-spacing: 0px;
+            margin-top: 0;
+            margin-bottom: 32px;
+            font-weight: 400;
+        }
+    
+        .footer a {
+            color: azure;
+        }
+        
+        .footer a:visited {
+            color: azure;
+        }
+    
+        .solid-break {
+            color: azure;
+            background-color: azure;
+            height: 3px;
+            width: 20%;
+        }
+    
+    
+}
+
 

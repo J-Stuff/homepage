@@ -15,31 +15,28 @@
 
 <body>
 <div class="column" style="margin-top: 5%;">
-    <img class="avatar" src="content/pfp.png" alt="Avatar" loading="lazy">
-    <p></p>
+    <img class="avatar" src="content/pfp_480.png" alt="Avatar" onload="imageLoaded(this)">
 
-    <h1 class="name">J Stuff</h1>
+
+    <h1 class="name">J Stuff </h1>
+    <hr class="solid-break">
     <br>
 
 
-    <div class="about">
-        <p class="bio">
-            <p class="bio-large"> Welcome </p>
-            I'm J Stuff, often known around places for my technical knowledge and general tinkering.
-        </p>
-        <p class="bio">
-            Find links to most of my socials & self hosted services below.
-        </p>
-        <p class="bio">
-            Most of my art can be found <a href="/artboard">here</a>.
+    <div>
+            <p class="bio-head"> Welcome </p>
+            <p class="bio">
+            Kia ora! I'm J Stuff.<br>
+            Just a silly internet dog from New Zealand.<br>
+            <br>
+            Find links to most of my socials below.
+            </p>
     </div>
     <br>
 
 
 
     <div class="socials">
-        <p class="bio-large">Socials</p>
-
         <a href="https://discord.com/users/jstuff" target="_blank">
             <button type="button" class="button">
                 <span class="button-text">Discord</span>
@@ -55,6 +52,13 @@
                     <img class="telegram-icon" src="/content/icons/telegram_logo_mono.png">
             </button>
         <h1></h1>
+        <a href="mailto:jstuff@j-stuff.net" target="_blank">
+            <button type="button" class="button">
+                <span class="button-text">E-Mail</span>
+                <span class="button-icon">
+                    <img class="telegram-icon" src="/content/icons/email_icon_mono.svg">
+            </button>
+        <h1></h1>
         <a href="https://bsky.app/profile/jstuff.bsky.social" target="_blank">
             <button type="button" class="button">
                 <span class="button-text">Bluesky</span>
@@ -63,25 +67,17 @@
             </button>
         </a>
         <h1></h1>
-        <a href="https://twitter.com/jstuffnz" target="_blank">
+
+        <a href="https://www.reddit.com/user/JStuffNZ/" target="_blank">
             <button type="button" class="button">
-                <span class="button-text">Twitter (𝕏)</span>
+                <span class="button-text">Reddit</span>
                 <span class="button-icon">
-                    <img class="x-icon" src="/content/icons/x_logo_mono.svg">
+                    <img class="telegram-icon" src="/content/icons/reddit_logo_mono.svg">
             </button>
-        </a>
         <h1></h1>
-
-
         
-    </div>
-    <br>
-    <br>
 
-    <div class="hosted">
-        <p class="bio-large">Other Places you can find me</p>
-
-        <a href="https://fireshare.j-stuff.net" target="_blank">
+        <a href="https://steamcommunity.com/id/JStuff" target="_blank">
             <button type="button" class="button">
                 <span class="button-text">Steam</span>
                 <span class="button-icon">
@@ -97,17 +93,28 @@
                     <img class="github-icon" src="/content/icons/github_logo_mono.svg">
             </button>
         </a>
-        <h1></h1>
 
+        <!-- Following Twitters ToS change to allow images uploaded to be used to train AI models, I have made the move away from that site. -->
+        <h1></h1>
+            <button type="button" class="button-disabled" id="x-button">
+                <script>
+                    const xButton = document.getElementById("x-button")
+                    xButton.addEventListener("click", function() { alert("Account Deprecated. Please use BlueSky")})
+                </script>
+                <span class="button-disabled-text">Twitter (𝕏)</span>
+                <span class="button-disabled-icon">
+                    <img class="x-icon" src="/content/icons/x_logo_mono.svg">
+            </button>
+        <h1></h1>
+        
     </div>
     <br>
     <br>
+
+
 
 </div>
 
     <div class="footer">
         <p class="footer-text">Made by J Stuff | <a href="https://github.com/J-Stuff/homepage" target="_blank">Source</a></p>
-    <!-- iconic.io loaders -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
